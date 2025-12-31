@@ -356,18 +356,20 @@
                 <p>Fill out the form and we'll get back to you within 2 hours</p>
             </div>
             <div class="contact-wrapper">
-                <form class="contact-form">
+                <!-- FormSpree Form - Connected to shreeyajha49@gmail.com -->
+                <form class="contact-form" action="https://formspree.io/f/mzdzpbdj" method="POST">
+                    
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <select required>
+                        <select name="package" required>
                             <option value="">Select Package</option>
                             <option value="romantic">Romantic Package</option>
                             <option value="family">Family Package</option>
@@ -378,10 +380,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Preferred Dates" required>
+                        <input type="text" name="dates" placeholder="Preferred Dates" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Message" rows="4"></textarea>
+                        <textarea name="message" placeholder="Message" rows="4"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enquire Now</button>
                 </form>
@@ -446,3 +448,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
