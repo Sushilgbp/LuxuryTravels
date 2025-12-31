@@ -68,37 +68,9 @@ document.querySelectorAll('.package-card, .feature-card, .step, .testimonial-car
     observer.observe(card);
 });
 
-// Form Submission Handler
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Show success message (you can replace this with actual form submission)
-    alert('Thank you for your enquiry! We will get back to you within 2 hours.');
-    
-    // Reset form
-    contactForm.reset();
-    
-    // In a real scenario, you would send this data to your server:
-    // fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data)
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     alert('Thank you! We will contact you soon.');
-    //     contactForm.reset();
-    // })
-    // .catch(error => {
-    //     alert('Something went wrong. Please try again.');
-    // });
-});
+// Form Submission Handler - FormSpree handles the submission
+// No need to prevent default or handle manually
+// FormSpree will show confirmation and send email automatically
 
 // Enquire Now Button Handlers
 document.querySelectorAll('.btn-package, .btn-primary, .cta-btn').forEach(button => {
